@@ -1,4 +1,7 @@
 package br.com.leandroid.funds.presentation.detailFunds
 
-class DetailFundsViewModel {
+import br.com.leandroid.funds.presentation.util.BaseViewModel
+
+class DetailFundsViewModel() : BaseViewModel() {
+
 }
