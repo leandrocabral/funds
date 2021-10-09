@@ -1,6 +1,7 @@
 package br.com.leandroid.funds.presentation.funds
 
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.leandroid.core.BindingActivity
 import br.com.leandroid.core.observeResource
 import br.com.leandroid.funds.R
@@ -9,8 +10,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FundsActivity : BindingActivity<FundsActivityBinding>() {
 
-    private val fundsAdapter by lazy{
-        FundsAdapter{
+    private val fundsAdapter by lazy {
+        FundsAdapter {
 
         }
     }
@@ -33,17 +34,21 @@ class FundsActivity : BindingActivity<FundsActivityBinding>() {
     private fun setupObserver() {
         viewModel.fundsList.observeResource(this,
             onSuccess = {
-
+                if (it.isNotEmpty()) {
+                    fundsAdapter.submitList(it)
+                }
             }, onError = {
 
             }, onLoading = {
 
-            })
+            }
+        )
     }
 
-    private fun setupRecyclerView(){
-        binding.fundsRecyclerview.apply{
+    private fun setupRecyclerView() {
+        binding.fundsRecyclerview.apply {
             adapter = fundsAdapter
+            layoutManager = LinearLayoutManager(context)
         }
     }
 }
