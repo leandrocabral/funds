@@ -15,9 +15,11 @@
         android:theme="@style/Theme.Funds">
         <activity
             android:name=".presentation.detailFunds.DetailFundsActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".presentation.funds.FundsActivity"
+            android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
