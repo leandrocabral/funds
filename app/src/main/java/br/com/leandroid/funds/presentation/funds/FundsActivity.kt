@@ -1,6 +1,7 @@
 package br.com.leandroid.funds.presentation.funds
 
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.leandroid.core.BindingActivity
 import br.com.leandroid.core.observeResource
@@ -40,7 +41,11 @@ class FundsActivity : BindingActivity<FundsActivityBinding>() {
             }, onError = {
 
             }, onLoading = {
-
+                if (it) {
+                    binding.fundsProgressbar.visibility = View.VISIBLE
+                } else {
+                    binding.fundsProgressbar.visibility = View.INVISIBLE
+                }
             }
         )
     }
