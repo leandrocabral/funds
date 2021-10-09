@@ -10,3 +10,5 @@ rootProject.name = "funds"
 include ':app'
 include ':domain'
 include ':data'
+include ':core'
+include ':ui'

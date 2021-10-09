@@ -1,4 +1,4 @@
-package br.com.leandroid.funds.presentation.util
+package br.com.leandroid.core
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
