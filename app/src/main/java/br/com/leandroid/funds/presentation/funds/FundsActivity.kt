@@ -1,24 +1,36 @@
 package br.com.leandroid.funds.presentation.funds
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import br.com.leandroid.core.BindingActivity
 import br.com.leandroid.core.observeResource
 import br.com.leandroid.funds.R
+import br.com.leandroid.funds.databinding.FundsActivityBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FundsActivity : AppCompatActivity() {
+class FundsActivity : BindingActivity<FundsActivityBinding>() {
+
+    private val fundsAdapter by lazy{
+        FundsAdapter{
+
+        }
+    }
 
     private val viewModel by viewModel<FundsViewModel>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.funds_activity)
+    override fun getLayoutId(): Int = R.layout.funds_activity
+
+    override fun onCreate(saveInstanceState: Bundle?) {
+        super.onCreate(saveInstanceState)
+        setupRecyclerView()
         setupObserver()
+        callFunds()
+    }
+
+    private fun callFunds() {
+        viewModel.getFunds()
     }
 
     private fun setupObserver() {
-        viewModel.getFunds()
-
         viewModel.fundsList.observeResource(this,
             onSuccess = {
 
@@ -27,5 +39,11 @@ class FundsActivity : AppCompatActivity() {
             }, onLoading = {
 
             })
+    }
+
+    private fun setupRecyclerView(){
+        binding.fundsRecyclerview.apply{
+            adapter = fundsAdapter
+        }
     }
 }
