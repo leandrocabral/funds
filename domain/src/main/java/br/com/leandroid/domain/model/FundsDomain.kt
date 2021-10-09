@@ -1,4 +1,5 @@
 package br.com.leandroid.domain.model
 
-class FundsDomain {
-}
+data class FundsDomain(
+    var fullName: String?
+)
