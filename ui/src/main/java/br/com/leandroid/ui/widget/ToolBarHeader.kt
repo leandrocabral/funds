@@ -21,12 +21,6 @@ class ToolbarHeaderView
         setAttribute(attrs)
     }
 
-    fun setTitle(text: String?) {
-        text?.let {
-            title?.text = it
-        }
-    }
-
     fun setType(type: String?) {
 
     }
