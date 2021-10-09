@@ -12,6 +12,8 @@
             android:id="@+id/funds_toolbarHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:title="@string/title_toolbar_funds"
+            app:type="1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
