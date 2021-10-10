@@ -21,8 +21,9 @@
                 android:id="@+id/strategy_card_funds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/letter_small"
                 android:layout_margin="@dimen/margin_medium"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/letter_small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_medium"
+                android:fontFamily="@font/roboto_bold"
                 android:textSize="@dimen/letter_medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/strategy_card_funds" />
@@ -40,9 +42,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_medium"
+                android:fontFamily="@font/roboto_medium"
                 android:textSize="@dimen/letter_small"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/name_card_funds" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
