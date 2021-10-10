@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
     <string name="app_name">funds</string>
     <string name="title_toolbar_funds">Fundos</string>
+    <string name="title_toolbar_detail_funds">Detalhes do Fundo</string>
 </resources>

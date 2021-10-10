@@ -18,11 +18,17 @@ class DetailFundsActivity : BindingActivity<DetailFundsActivityBinding>() {
     override fun onCreate(saveInstanceState: Bundle?) {
         super.onCreate(saveInstanceState)
         fundsDomain = intent.getParcelableExtra(DETAIL_FUNDS_KEY)
-
+        fundsDomain?.let {
+            binding.item = it
+        }
+        setupObserver()
     }
 
     private fun setupObserver() {
-
+        binding.detailFundsToolbarHeader
+            .arrowBack?.setOnClickListener {
+                finish()
+            }
     }
 
     companion object {

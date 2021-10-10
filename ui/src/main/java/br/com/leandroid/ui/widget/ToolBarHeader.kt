@@ -18,7 +18,7 @@ class ToolbarHeaderView
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private val title: TextView?
-    private val arrowBack: ImageView?
+    val arrowBack: ImageView?
     val search: ImageView?
     val editSearch: EditText?
 

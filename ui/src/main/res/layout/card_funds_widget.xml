@@ -6,57 +6,55 @@
     tools:layout_width="match_parent"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/corner_medium"
+        app:cardElevation="@dimen/elevation_medium">
 
-        <View
-            android:id="@+id/line_card_funds"
-            android:layout_width="8dp"
-            android:layout_height="match_parent"
-            android:background="@color/orange"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/strategy_card_funds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/strategy_card_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/description_strategy_card_funds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toBottomOf="@+id/strategy_card_funds" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_strategy_card_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/strategy_card_funds" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/name_card_funds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/letter_large"
-            app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toBottomOf="@+id/description_strategy_card_funds" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/name_card_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/letter_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description_strategy_card_funds" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/mininum_value_card_funds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/letter_small"
-            app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toBottomOf="@+id/name_card_funds" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mininum_value_card_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/letter_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_card_funds" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/percent_card_funds"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/letter_small"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_card_funds" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/percent_card_funds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/letter_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_card_funds" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.cardview.widget.CardView>
 </merge>

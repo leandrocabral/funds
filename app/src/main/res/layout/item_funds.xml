@@ -16,9 +16,11 @@
             android:id="@+id/cardfunds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:name="@{item.fullName}"
+            android:layout_margin="@dimen/margin_medium"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:name="@{item.fullName}" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
