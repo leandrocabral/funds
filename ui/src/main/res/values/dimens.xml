@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="icon_size">100dp</dimen>
     <dimen name="elevation_medium">10dp</dimen>
     <dimen name="corner_medium">5dp</dimen>
     <dimen name="toolbar_header_height">70dp</dimen>

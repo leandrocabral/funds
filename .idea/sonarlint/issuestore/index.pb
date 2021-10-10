@@ -9,7 +9,3 @@ v
 Fdata/src/main/java/br/com/leandroid/data/network/InterceptorFactory.kt,f\f\ffd3115f21020cc33f403814cf0c6c266eaffc9c
 q
 Adata/src/main/java/br/com/leandroid/data/network/OkHttpFactory.kt,c\f\cf9f113b7059113010e90c608dce6cd074b94327
-h
-8app/src/main/java/br/com/leandroid/funds/MainActivity.kt,2\9\29283fd1b55e34bf87b244bd19bb7c11030c46a6
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
