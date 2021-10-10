@@ -5,6 +5,7 @@
     <dimen name="margin_large">24dp</dimen>
     <dimen name="margin_super_large">32dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
+    <dimen name="letter_small">12sp</dimen>
     <dimen name="letter_medium">20sp</dimen>
     <dimen name="letter_large">24sp</dimen>
 </resources>
