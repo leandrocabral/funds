@@ -7,5 +7,7 @@
 
     <declare-styleable name="CardFundsWidget">
         <attr name="name" format="string" />
+        <attr name="strategy" format="string" />
+        <attr name="typeFund" format="string" />
     </declare-styleable>
 </resources>

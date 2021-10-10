@@ -21,13 +21,14 @@ data class FundsEntity(
     var specification: Specification?
 )
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Operability(
     @JsonProperty("retrieval_quotation_days_str")
     var quotationDays: String?,
     @JsonProperty("minimum_initial_application_amount")
     var minimumApplication: String?
 )
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class Specification(
     @JsonProperty("fund_main_strategy_name")
     var strategy: String?,

@@ -11,7 +11,8 @@ internal class RetrofitFactory {
         converterFactory: Converter.Factory,
         rxJava2CallAdapterFactory: RxJava2CallAdapterFactory
     ): Retrofit {
-        val url = "https://s3.amazonaws.com/orama-media/json/"
+        //val url = "https://s3.amazonaws.com/orama-media/json/"
+        val url = "https://demo7441262.mockable.io/"
 
         return Retrofit.Builder()
             .baseUrl(url)

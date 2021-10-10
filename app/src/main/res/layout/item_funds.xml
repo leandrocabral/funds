@@ -20,7 +20,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:name="@{item.name}" />
+            app:name="@{item.name}"
+            app:strategy="@{item.strategy}"
+            app:type="@{item.type}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
