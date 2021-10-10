@@ -13,6 +13,10 @@ class FundsAdapter(private val onClick: (FundsDomain) -> Unit) :
     override fun onBindViewHolder(binding: ItemFundsBinding, position: Int) {
         binding.run {
             item = getItem(position)
+
+            cardfunds.setOnClickListener {
+                onClick.invoke(getItem(position))
+            }
         }
     }
 }

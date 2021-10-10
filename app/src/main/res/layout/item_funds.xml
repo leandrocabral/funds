@@ -13,8 +13,10 @@
         android:layout_height="wrap_content">
 
         <br.com.leandroid.ui.widget.CardFunds
+            android:id="@+id/cardfunds"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:name="@{item.fullName}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

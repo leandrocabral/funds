@@ -20,18 +20,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/startegy_card_funds"
+            android:id="@+id/strategy_card_funds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@+id/line_card_funds"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/description_startegy_card_funds"
+            android:id="@+id/description_strategy_card_funds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toBottomOf="@+id/startegy_card_funds" />
+            app:layout_constraintTop_toBottomOf="@+id/strategy_card_funds" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name_card_funds"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/letter_large"
             app:layout_constraintStart_toEndOf="@+id/line_card_funds"
-            app:layout_constraintTop_toBottomOf="@+id/description_startegy_card_funds" />
+            app:layout_constraintTop_toBottomOf="@+id/description_strategy_card_funds" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/mininum_value_card_funds"
