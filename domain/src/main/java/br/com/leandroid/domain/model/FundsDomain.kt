@@ -7,7 +7,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 class FundsDomain(
     var fullName: String?,
-    var name: String?,
+    var name: String,
     var description: String?,
     var quotationDays: String?,
     var minimumApplication: String?,
@@ -24,13 +24,13 @@ class FundsDomain(
             fundsEntities?.forEach {
                 fundsDomains.add(
                     FundsDomain(
-                        fullName = it.fullName,
-                        name = it.simpleName,
-                        description = it.descriptionSeo,
-                        quotationDays = it.operability?.quotationDays,
-                        minimumApplication = it.operability?.minimumApplication,
-                        strategy = it.specification?.strategy,
-                        type = it.specification?.fundType
+                        fullName = it.fullName ?: "",
+                        name = it.simpleName ?: "",
+                        description = it.descriptionSeo ?: "",
+                        quotationDays = it.operability?.quotationDays ?: "",
+                        minimumApplication = it.operability?.minimumApplication ?: "",
+                        strategy = it.specification?.strategy ?: "",
+                        type = it.specification?.fundType ?: ""
                     )
                 )
             }

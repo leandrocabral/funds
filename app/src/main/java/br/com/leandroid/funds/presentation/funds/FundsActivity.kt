@@ -3,6 +3,7 @@ package br.com.leandroid.funds.presentation.funds
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.leandroid.core.BindingActivity
 import br.com.leandroid.core.observeResource
@@ -29,6 +30,7 @@ class FundsActivity : BindingActivity<FundsActivityBinding>() {
         setupRecyclerView()
         setupObserver()
         callFunds()
+        searchFunds()
     }
 
     private fun callFunds() {
@@ -58,6 +60,22 @@ class FundsActivity : BindingActivity<FundsActivityBinding>() {
             adapter = fundsAdapter
             layoutManager = LinearLayoutManager(context)
         }
+    }
+
+    private fun searchFunds() {
+        binding.fundsToolbarHeader
+            .editSearch?.setOnEditorActionListener { _, actionId, _ ->
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    filterFunds()
+                }
+                false
+            }
+    }
+
+    private fun filterFunds() {
+        val funds = binding.fundsToolbarHeader.editSearch?.text.toString()
+        viewModel.searchFunds(funds)
+        fundsAdapter.notifyDataSetChanged()
     }
 
     private fun startDetailFundsActivity(fundsDomain: FundsDomain) {

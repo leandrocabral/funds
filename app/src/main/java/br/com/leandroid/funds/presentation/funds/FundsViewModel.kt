@@ -7,22 +7,40 @@ import br.com.leandroid.core.Resource
 import br.com.leandroid.domain.model.FundsDomain
 import br.com.leandroid.domain.usecase.FundsUseCase
 import kotlinx.coroutines.launch
+import java.util.*
 
 class FundsViewModel(private val useCase: FundsUseCase) : BaseViewModel() {
 
     val fundsList = MutableLiveData<Resource<List<FundsDomain>>>()
+    var fundsItem: List<FundsDomain> = listOf()
 
     fun getFunds() {
         viewModelScope.launch {
             with(fundsList) {
                 loading(true)
                 try {
-                    success(useCase.getFunds())
+                    fundsItem = useCase.getFunds()
+                    success(fundsItem)
                 } catch (e: Exception) {
                     error(e)
                 } finally {
                     loading(false)
                 }
+            }
+        }
+    }
+
+    fun searchFunds(search: String?) {
+        search?.let {
+            if (it.isEmpty()) {
+                fundsList.success(fundsItem)
+            } else {
+                fundsList.success(
+                    fundsItem.filter {
+                        it.name.lowercase(Locale.ROOT)
+                            .contains(search.lowercase(Locale.ROOT))
+                    }
+                )
             }
         }
     }
