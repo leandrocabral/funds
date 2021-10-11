@@ -12,7 +12,7 @@ internal class RetrofitFactory {
         rxJava2CallAdapterFactory: RxJava2CallAdapterFactory
     ): Retrofit {
         val url = "https://s3.amazonaws.com/orama-media/json/"
-        
+
         return Retrofit.Builder()
             .baseUrl(url)
             .client(okHttpClient)
