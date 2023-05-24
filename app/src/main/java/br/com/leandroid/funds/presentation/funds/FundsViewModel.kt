@@ -6,10 +6,11 @@ import br.com.leandroid.core.BaseViewModel
 import br.com.leandroid.core.Resource
 import br.com.leandroid.domain.model.FundsDomain
 import br.com.leandroid.domain.usecase.FundsUseCase
+import br.com.leandroid.domain.usecase.IFundsUseCase
 import kotlinx.coroutines.launch
 import java.util.*
 
-class FundsViewModel(private val useCase: FundsUseCase) : BaseViewModel() {
+class FundsViewModel(private val useCase: IFundsUseCase) : BaseViewModel() {
 
     val fundsList = MutableLiveData<Resource<List<FundsDomain>>>()
     var fundsItem: List<FundsDomain> = listOf()
